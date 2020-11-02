@@ -1,0 +1,12 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:WpfApp4"
+                    xmlns:system="clr-namespace:System;assembly=System.Runtime" 
+                    >
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Themes/ToggleSwitchEx.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Themes/ButtonEx.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    <Style BasedOn="{StaticResource WpfApp4.Style.ToggleSwitchEx}" TargetType="{x:Type local:ToggleSwitchEx}" />
+</ResourceDictionary>
