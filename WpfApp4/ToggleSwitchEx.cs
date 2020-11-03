@@ -424,11 +424,13 @@ namespace WpfApp4
         {
             this.Toggled?.Invoke(this, new RoutedEventArgs());
         }
+
         static ToggleSwitchEx()
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(ToggleSwitchEx), new FrameworkPropertyMetadata(typeof(ToggleSwitchEx)));
             EventManager.RegisterClassHandler(typeof(ToggleSwitchEx), MouseLeftButtonDownEvent, new MouseButtonEventHandler(OnMouseLeftButtonDown), true);
         }
+
         public ToggleSwitchEx()
         {
             this.IsEnabledChanged += this.OnIsEnabledChanged;

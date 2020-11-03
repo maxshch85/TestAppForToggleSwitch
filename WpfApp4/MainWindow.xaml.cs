@@ -26,12 +26,8 @@ namespace WpfApp4
         {
             InitializeComponent();
             DataContext = this;
-           
-            
             BottomPosition = System.Windows.SystemParameters.PrimaryScreenHeight;
             TopPosition = BottomPosition - Height;
-            Style style = this.FindResource("WpfApp4.Style.ToggleSwitchEx") as Style;
-            ActivateButton.Style = style;
         }
         public double BottomPosition { get; set; }
         public double TopPosition { get; set; }

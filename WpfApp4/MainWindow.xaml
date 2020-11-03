@@ -16,7 +16,7 @@
                 <!--<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />-->
                 <!--<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />-->
                 <ResourceDictionary Source="pack://application:,,,/Themes/Generic.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Themes/dark.blue.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Themes/Dark.Blue.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
@@ -37,28 +37,34 @@
                             OnContent=""
                            >
             <mah:ToggleSwitch.Style>
-                <Style TargetType="{x:Type mah:ToggleSwitch}" >
+                <Style TargetType="{x:Type mah:ToggleSwitch}" BasedOn="{StaticResource {x:Type mah:ToggleSwitch}}">
                     <Setter Property="ToolTip" Value="deactivated"/>
                     <Style.Triggers>
                         <Trigger Property="IsOn" Value="False">
-                            <Setter Property="ToolTip" Value=" ActivateButtonTooltip}"/>
+                            <Setter Property="ToolTip" Value=" ActivateButtonTooltip"/>
                         </Trigger>
                     </Style.Triggers>
                 </Style>
             </mah:ToggleSwitch.Style>
         </mah:ToggleSwitch>
+
         <local:ToggleSwitchEx Grid.Column="0" x:Name="ActivateButton" 
-                          Margin="10,0,0,0"
-                          VerticalAlignment="Center"
-                          Padding="0"
-                          OffContent=""
-                          OnContent=""
-                          AutomationProperties.AutomationId="Radio"
-                          AutomationProperties.Name="RadioName" OverridesDefaultStyle="True"
+                              Margin="10,0,0,0"
+                              VerticalAlignment="Center"
+                              Padding="0"
+                              OffContent=""
+                              OnContent=""
+                              AutomationProperties.AutomationId="Radio"
+                              AutomationProperties.Name="RadioName"
         >
             <local:ToggleSwitchEx.Style>
-                <Style TargetType="{x:Type local:ToggleSwitchEx}" >
+                <Style TargetType="{x:Type local:ToggleSwitchEx}" BasedOn="{StaticResource {x:Type local:ToggleSwitchEx}}">
                     <Setter Property="ToolTip" Value="deactivated"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsOn" Value="False">
+                            <Setter Property="ToolTip" Value=" ActivateButtonTooltip"/>
+                        </Trigger>
+                    </Style.Triggers>
                 </Style>
             </local:ToggleSwitchEx.Style>
         </local:ToggleSwitchEx>
